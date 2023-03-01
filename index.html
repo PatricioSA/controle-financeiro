@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Controle Financeiro</title>
+</head>
+
+<body>
+    <main>
+        <section class="top-card">
+            <h1>Carteira</h1>
+            <p>R$0.0</p>
+            <div>
+                <p>Ganhos <br> 0.0</p>
+                <p>Despesas <br> 0.0</p>
+            </div>
+        </section>
+    
+        <div id="botao">
+            <button id="btn-add-transaction">Adicionar</button>
+        </div>
+    
+        <section class="transactions">
+            <div>
+                <p class="transaction-name">teste</p>
+                <p class="transaction-amount">R$150</p>
+            </div>
+        </section>
+
+        <div id="box-dialogue">
+            <dialog>
+                <h1>Nova Transação</h1>
+                <input type="number" placeholder="Valor">
+                <input type="text" placeholder="Nome da Transação">
+                <div>
+                    <button id="cancel-transaction">Cancelar</button>
+                    <button>Adicionar</button>
+                </div>
+            </dialog>
+        </div>
+    </main>
+</body>
+
+</html>

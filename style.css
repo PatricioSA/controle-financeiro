@@ -4,20 +4,25 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #dddcdd;
+}
+
 main {
     max-width: 1200px;
-    height: 100vh;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .top-card {
-    background-color: rgb(56, 56, 250);
-    max-width: 800px;
+    background-color: #dddcdd;
+    max-width: 600px;
     height: 150px;
     border-radius: .5rem;
     text-align: center;
     margin: 0 auto;
     margin-top: 1.2rem;
+    box-shadow: 8px 8px 15px 1px #b5b4b5,-8px -8px 15px 1px #fff;
 }
 
 .top-card h1 {
@@ -28,31 +33,57 @@ main {
     margin-bottom: 1rem;
 }
 
+.top-card #total-value {
+    font-size: 2rem;
+}
+
+.seta {
+    background-color: #fff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
 .top-card div {
     display: flex;
     justify-content: space-around;
+    gap: 0.5rem;
 }
 
 #botao {
-    width: 800px;
+    width: 600px;
     margin: 0 auto;
 }
 
+#btn-add-transaction {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #6e6c6e;
+    color: #fff;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10rem;
+    border: none;
+}
+
 .transactions {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 1rem;
 }
 
 .transactions div {
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: .5rem;
-    background-color: gray;
+    background-color: #f5f4f6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#box-dialogue {
+#box-dialog {
     text-align: center;
 }
 
@@ -83,4 +114,5 @@ dialog button {
     color: #fff;
     margin-top: 1rem;
     padding: 0.5rem;
+    cursor: pointer;
 }

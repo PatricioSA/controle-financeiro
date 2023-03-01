@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="index.js" defer></script>
     <title>Controle Financeiro</title>
 </head>
@@ -14,17 +16,31 @@
     <main>
         <section class="top-card">
             <h1>Carteira</h1>
-            <p>R$0.0</p>
+            <p id="total-value">R$20.000</p>
             <div>
-                <p>Ganhos <br> 0.0</p>
-                <p>Despesas <br> 0.0</p>
+                <div>
+                    <span class="material-symbols-outlined seta" style="color: #10b810;">
+                        arrow_upward
+                    </span>
+                    <p>Ganhos <br> 0.0</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined seta" style="color: #ff0000;">
+                        arrow_downward
+                    </span>
+                    <p>Despesas <br> 0.0</p>
+                </div>
             </div>
         </section>
-    
+
         <div id="botao">
-            <button id="btn-add-transaction">Adicionar</button>
+            <button id="btn-add-transaction">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+            </button>
         </div>
-    
+
         <section class="transactions">
             <div>
                 <p class="transaction-name">teste</p>
@@ -32,7 +48,7 @@
             </div>
         </section>
 
-        <div id="box-dialogue">
+        <div id="box-dialog">
             <dialog>
                 <h1>Nova Transação</h1>
                 <input type="number" placeholder="Valor">

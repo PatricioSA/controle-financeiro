@@ -22,19 +22,19 @@
                     <span class="material-symbols-outlined seta" style="color: #10b810;">
                         arrow_upward
                     </span>
-                    <p>Ganhos <br> 0.0</p>
+                    <p>Ganhos <br><span id="total-incomes">0.0</span></p>
                 </div>
                 <div>
                     <span class="material-symbols-outlined seta" style="color: #ff0000;">
                         arrow_downward
                     </span>
-                    <p>Despesas <br> 0.0</p>
+                    <p>Despesas <br> <span id="total-expanses">0.0</span></p>
                 </div>
             </div>
         </section>
 
         <div id="botao">
-            <button id="btn-add-transaction">
+            <button id="btn-new-transaction">
                 <span class="material-symbols-outlined">
                     add
                 </span>
@@ -42,20 +42,22 @@
         </div>
 
         <section class="transactions">
-            <div>
-                <p class="transaction-name">teste</p>
-                <p class="transaction-amount">R$150</p>
-            </div>
         </section>
 
         <div id="box-dialog">
             <dialog>
                 <h1>Nova Transação</h1>
-                <input type="number" placeholder="Valor">
-                <input type="text" placeholder="Nome da Transação">
+
+                <label>Ganho</label>
+                <input type="radio" name="tipo-transacao" value="receita">
+                <label>Despesas</label>
+                <input type="radio" name="tipo-transacao" value="despesa">
+
+                <input type="number" placeholder="Valor" id="input-trasaction-value" class="input-text">
+                <input type="text" placeholder="Nome da Transação" id="input-trasaction-name" class="input-text">
                 <div>
                     <button id="cancel-transaction">Cancelar</button>
-                    <button>Adicionar</button>
+                    <button id="add-transaction">Adicionar</button>
                 </div>
             </dialog>
         </div>

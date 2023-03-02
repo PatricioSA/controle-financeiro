@@ -55,7 +55,7 @@ main {
     margin: 0 auto;
 }
 
-#btn-add-transaction {
+#btn-new-transaction {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -77,6 +77,7 @@ main {
 
 .transactions div {
     padding: 0.8rem;
+    margin-bottom: 1rem;
     border-radius: .5rem;
     background-color: #f5f4f6;
     display: flex;
@@ -102,7 +103,7 @@ dialog {
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
 }
 
-dialog input {
+dialog .input-text {
     width: 250px;
     height: 40px;
     margin: 0.5rem;

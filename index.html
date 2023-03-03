@@ -16,7 +16,7 @@
     <main>
         <section class="top-card">
             <h1>Carteira</h1>
-            <p id="total-value">R$20.000</p>
+            <p id="total-value">R$0</p>
             <div>
                 <div>
                     <span class="material-symbols-outlined seta" style="color: #10b810;">
@@ -33,34 +33,37 @@
             </div>
         </section>
 
-        <div id="botao">
-            <button id="btn-new-transaction">
-                <span class="material-symbols-outlined">
-                    add
-                </span>
-            </button>
-        </div>
+        <button id="btn-new-transaction">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+        </button>
 
         <section class="transactions">
         </section>
 
-        <div id="box-dialog">
-            <dialog>
-                <h1>Nova Transação</h1>
+        <dialog>
+            <h1>Nova Transação</h1>
 
-                <label>Ganho</label>
-                <input type="radio" name="tipo-transacao" value="receita">
-                <label>Despesas</label>
-                <input type="radio" name="tipo-transacao" value="despesa">
-
-                <input type="number" placeholder="Valor" id="input-trasaction-value" class="input-text">
-                <input type="text" placeholder="Nome da Transação" id="input-trasaction-name" class="input-text">
+            <div id="inputs-radios">
                 <div>
-                    <button id="cancel-transaction">Cancelar</button>
-                    <button id="add-transaction">Adicionar</button>
+                    <label>Ganho</label>
+                    <input type="radio" name="tipo-transacao" value="receita">
                 </div>
-            </dialog>
-        </div>
+                <div>
+                    <label>Despesas</label>
+                    <input type="radio" name="tipo-transacao" value="despesa">
+                </div>
+            </div>
+
+            <input type="number" placeholder="Valor" id="input-trasaction-value" class="input-text">
+            <input type="text" placeholder="Nome da Transação" id="input-trasaction-name" class="input-text">
+            <div>
+                <button id="cancel-transaction">Cancelar</button>
+                <button id="add-transaction">Adicionar</button>
+            </div>
+        </dialog>
+
     </main>
 </body>
 

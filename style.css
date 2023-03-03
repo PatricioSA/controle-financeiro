@@ -50,11 +50,6 @@ main {
     gap: 0.5rem;
 }
 
-#botao {
-    width: 600px;
-    margin: 0 auto;
-}
-
 #btn-new-transaction {
     position: fixed;
     bottom: 20px;
@@ -84,10 +79,6 @@ main {
     justify-content: space-between;
 }
 
-#box-dialog {
-    text-align: center;
-}
-
 dialog::backdrop {
     background-color: rgb(0 0 0 / .5);
 }
@@ -96,11 +87,22 @@ dialog {
     width: 300px;
     height: 300px;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: 1rem;
     top: 30%;
     border: none;
     border-radius: .5rem;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    text-align: center;
+}
+
+dialog h1 {
+    margin-bottom: 1rem;
+}
+
+dialog #inputs-radios {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 dialog .input-text {

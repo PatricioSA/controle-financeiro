@@ -19,7 +19,7 @@ function addTransaction() {
     
     createNewTransaction(transactionName, transactionValue)
 
-    atualizarValores()
+    updateValues()
 
     modal.close()
 }
@@ -27,29 +27,29 @@ function addTransaction() {
 function createNewTransaction(transactionName, transactionValue) {
     const listTransactions = document.querySelector('section[class="transactions"]')
     
-    const inputTipoTransacao = document.querySelector('input[name="tipo-transacao"]:checked')
-    console.log(inputTipoTransacao)
+    const inputTypeTransaction = document.querySelector('input[name="tipo-transacao"]:checked')
+    console.log(inputTypeTransaction)
     
     const div = document.createElement('div')
     const p1 = document.createElement('p')
     const p2 = document.createElement('p')
     
     p1.innerText = transactionName
-    p2.innerText = inputTipoTransacao.value == 'receita' ? `+R$${transactionValue}` : `-R$${transactionValue}`
+    p2.innerText = inputTypeTransaction.value == 'receita' ? `+R$${transactionValue}` : `-R$${transactionValue}`
     
-    p2.style.color = inputTipoTransacao.value == 'receita' ? p2.style.color = 'green' : p2.style.color = 'red'
+    p2.style.color = inputTypeTransaction.value == 'receita' ? p2.style.color = 'green' : p2.style.color = 'red'
     
     div.append(p1, p2)
     listTransactions.appendChild(div)
 
-    transactions.push([transactionName, inputTipoTransacao.value, parseInt(transactionValue)])
+    transactions.push({transactionName, typeTransaction: inputTypeTransaction.value, value: parseFloat(transactionValue)})
 }
 
 function calculateIncomes() {
     let totalIncome = 0;
     for (var i = 0; i < transactions.length; i++) {
-      if (transactions[i][1] == 'receita') {
-        totalIncome += transactions[i][2];
+      if (transactions[i].typeTransaction == 'receita') {
+        totalIncome += transactions[i].value;
       }
     }
     const incomes = document.getElementById('total-incomes')
@@ -60,8 +60,8 @@ function calculateIncomes() {
 function calculateExpanses() {
     let totalExpanses = 0;
     for (var i = 0; i < transactions.length; i++) {
-      if (transactions[i][1] == 'despesa') {
-        totalExpanses += transactions[i][2];
+      if (transactions[i].typeTransaction == 'despesa') {
+        totalExpanses += transactions[i].value;
       }
     }
     const expanses = document.getElementById('total-expanses')
@@ -69,7 +69,7 @@ function calculateExpanses() {
     return totalExpanses
 }
 
-function atualizarValores() {
+function updateValues() {
     const totalValue = document.getElementById('total-value')
     calculateIncomes()
     calculateExpanses()
